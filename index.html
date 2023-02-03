@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeHub - Search and Explore Animes on AnimeHub</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+      </style>
+    <style>
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#b30000, #f19e10,#da00fb);
+  border-radius: 10px;
+  transition: 0.3s;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  transition: 0.3s;
+  background: #b30000; 
+}
+
+      body{
+        font-family: "Josefin Sans", sans-serif;
+        background-color: #121212;
+      }
+      header::before{
+        content: '';
+        position: absolute;
+        background: url(./ok.jpeg) no-repeat center center/cover;
+        height: 100%;
+        width: 100%;
+        z-index: -2;
+      }
+      .covv{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.575);
+        z-index: -2;
+      }
+        .show, .search{
+          display: flex;
+          flex-wrap: wrap;
+        }
+        footer{
+          background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="text-gray-600 body-font">
+      <div class="covv"></div>
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a href="/" class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsIM0wjRDRh9kt7yMFQDJcIITH_kd6Ifz6fA&usqp=CAU" style="width: 4rem; height: 4.5rem; border-radius:50%" alt="Xtend Ettisaf">
+            <span class="ml-3 text-xl">Anime<span class="text-red-700">.</span>Hub</span>
+          </a>
+        </div>
+      </header>
+
+    <section class="oo text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap w-full mb-20">
+            <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+              <h1 class="sm:text-3xl text-2xl mx-5 font-medium title-font mb-2 text-white"><span class="text-red-500 xl-3">A</span>nime<span class="text-red-500 xl-3">H</span>ub</h1>
+              <div class="h-1 w-20 bg-red-500 rounded"></div>
+            </div>
+            <p class="lg:w-1/2 w-full leading-relaxed text-xl text-white">Find your favorite animes and read articel on them only on AnimeHub. Just search and move on!</p>
+          </div>
+          
+
+          <div class="p-2 w-1/2">
+            <div class="search relative justify-center">
+              <label for="email" class="leading-7 text-sm text-white">Search Your Anime Here</label>
+              <input type="text" id="text" name="text" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                
+            </div>
+            <div class="p-2 my-3 w-full">
+                <button id="find" class="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Search</button>
+              </div>
+          </div>
+
+      </section>
+
+      <section class="text-gray-600 body-font">
+        <div style="text-align: center;" class="cld">
+      </div>
+
+           <div class="show"></div>
+
+      </section>
+
+
+
+      <footer class="text-gray-600 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            <img src="https://avatars.githubusercontent.com/u/107711625?v=4" style="width: 4rem; border-radius:50%" alt="Xtend Ettisaf">
+            </svg>
+            <span class="ml-3 text-xl">AnimeHub</span>
+          </a>
+          <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© AnimeHub —
+            <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@xtendEttisaf</a>
+          </p>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            
+            <a target="_blank" href="https://www.facebook.com/xtend.etti.5/" class="text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/ettisafxrup" class="ml-3 text-gray-500">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </footer>
+
+    <script src="try.js"></script>
+</body>
+
+</html>
